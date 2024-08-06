@@ -1,4 +1,4 @@
-package com.mydemoproject.camundaexample.info;
+package com.mydemoproject.camundaexample.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.AccessLevel;
