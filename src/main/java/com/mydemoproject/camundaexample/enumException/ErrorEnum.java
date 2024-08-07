@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public enum ErrorEnum {
 
-    CONNECTION_FAILED(404,"Connection Failed !");
+    CONNECTION_FAILED(406,"Connection Failed !");
 
     int errorCode;
     String errorMessage;

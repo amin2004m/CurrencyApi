@@ -16,10 +16,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ServiceException.class)
     public ResponseEntity<ErrorResponse> handleServiceException(ServiceException exception) {
         ErrorResponse errorResponse = new ErrorResponse();
-        errorResponse.setErrorCode(404);
+        errorResponse.setErrorCode(406);
         errorResponse.setErrorMessage(exception.getMessage());
         errorResponse.setUuid(UUID.randomUUID().toString());
-        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_ACCEPTABLE);
     }
 
     @ExceptionHandler(JsonProcessingException.class)
